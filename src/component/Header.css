@@ -1,0 +1,32 @@
+body{
+  margin: 0px;
+  padding: 0px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ddd;
+  border-radius: 5px;
+  
+}
+
+/* .logo img {
+  height: 40px;
+} */
+
+a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+span{
+  color: black;
+  font-weight: bold;
+  padding-left: 20px;
+}
