@@ -6,6 +6,8 @@ import { Provider } from 'react-redux'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomeLayout from './component/HomeLayout'
 import Wishlist from './component/Wishlist';
+import Login from "./component/Login"
+import Register from './component/Resgister'
 
 
 
@@ -15,9 +17,11 @@ const App = () => {
     <Provider store={store}>
     <BrowserRouter>
       <Routes>
+      <Route path="/signup" element={<Register/>}/>
+      <Route path="/login" element={<Login />}></Route>
         <Route path="/" element={<HomeLayout />}>
           <Route path="/" element={<College/>} />
-          <Route path="/cart" element={<Wishlist/>}/>
+          <Route path="/wishlist" element={<Wishlist/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

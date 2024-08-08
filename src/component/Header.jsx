@@ -11,7 +11,7 @@ const Header = () => {
       <nav className="nav-links">
         <Link to='/'>College</Link>
         <span>About</span>
-        <Link to='/cart'>Wishlist: {collegeItem.length}</Link>
+        <Link to='/wishlist'>Wishlist: {collegeItem.length}</Link>
         
       </nav>
     </header>
