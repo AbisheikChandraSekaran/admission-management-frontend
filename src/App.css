@@ -57,7 +57,11 @@
   }
   
   .college-item button {
-    padding: 10px 20px;
+    display: flex;
+    width: auto;
+    justify-content: center;
+    height:30px;
+    padding: 5px 20px;
     background-color:black;
     color: white;
     border: none;
@@ -79,5 +83,13 @@
 
   .college-item span{
     margin:0px 
+  }
+
+  .Buttondiv {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    
   }
   

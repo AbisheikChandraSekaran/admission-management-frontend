@@ -10,6 +10,8 @@ const Header = () => {
       <span>Logo</span>
       <nav className="nav-links">
         <Link to='/'>College</Link>
+        <Link to='/signup'>Sign Up</Link>
+        <Link to='/login'>Login</Link>
         <span>About</span>
         <Link to='/wishlist'>Wishlist: {collegeItem.length}</Link>
         

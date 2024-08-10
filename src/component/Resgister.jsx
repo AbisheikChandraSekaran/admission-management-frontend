@@ -1,37 +1,63 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import './Register.css'
+import { toast } from 'react-toastify';
+import './Register.css';
 
-const Signup = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    password: '',
-  });
+const Register = () => {
+  // const [formData, setFormData] = useState({
+  //   name: '',
+  //   email: '',
+  //   password: '',
+  // });
+
+  
+  const [name, setName] =useState("");
+  const [email, setEmail] =useState("");
+  const [password, setPassword] =useState("");
+
+  const handleNameChange =(e) =>{
+    setName(e.target.value);
+  }
+  const handleEmailChange = (e) =>{
+    setEmail(e.target.value);
+  };
+  
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+  
+
+
+
+
+
+
+
 
   const [error, setError] = useState('');
   const [success, setSuccess] = useState(false); // Track success state
   const navigate = useNavigate(); // Initialize the navigate function
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const payload = {
+      name,
+      email,
+      password,
+    };
 
     try {
-      const res = await axios.post('http://localhost:3000/signup', formData);
+      const res = await axios.post('http://localhost:3000/signup', payload);
       setSuccess(true); // Set success state to true on successful signup
       setError('');
+      toast.success(res.data.message)
     } catch (err) {
+      console.log(err);
       setError(err.response?.data?.error || 'An error occurred during signup');
-      setSuccess(false); // Ensure success is false if an error occurs
+      setSuccess(false); 
+      toast.error(err.response?.data?.error)
     }
   };
 
@@ -45,6 +71,7 @@ const Signup = () => {
   }
 
   return (
+    <div className="signup-container-main">
     <div className="signup-container">
       <h2>Sign Up</h2>
       <form onSubmit={handleSubmit}>
@@ -54,8 +81,8 @@ const Signup = () => {
             type="text"
             id="name"
             name="name"
-            value={formData.name}
-            onChange={handleChange}
+            value={name}
+            onChange={handleNameChange}
             required
           />
         </div>
@@ -65,8 +92,8 @@ const Signup = () => {
             type="email"
             id="email"
             name="email"
-            value={formData.email}
-            onChange={handleChange}
+            value={email}
+            onChange={handleEmailChange}
             required
           />
         </div>
@@ -76,8 +103,8 @@ const Signup = () => {
             type="password"
             id="password"
             name="password"
-            value={formData.password}
-            onChange={handleChange}
+            value={password}
+            onChange={handlePasswordChange}
             required
           />
         </div>
@@ -86,7 +113,8 @@ const Signup = () => {
 
       {error && <p className="error-message">{error}</p>}
     </div>
+    </div>
   );
 };
 
-export default Signup;
+export default Register;

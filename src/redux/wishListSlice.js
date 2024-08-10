@@ -8,9 +8,12 @@ const wishListSlice = createSlice({
     reducers: {
         addItem: (state,action)=>{
             state.items.push(action.payload)
+        },
+        setWishlist: (state, action) => {
+            state.items = action.payload;
         }
     },
 });
 
-export const {addItem} = wishListSlice.actions;
+export const {addItem, setWishlist} = wishListSlice.actions;
 export default wishListSlice.reducer
