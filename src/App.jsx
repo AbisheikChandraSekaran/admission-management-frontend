@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import College from './component/College'
 import Header from './component/Header'
 import AddCollegeForm from './component/AddCollegeForm';
+import 'react-toastify/dist/ReactToastify.css';
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomeLayout from './component/HomeLayout'

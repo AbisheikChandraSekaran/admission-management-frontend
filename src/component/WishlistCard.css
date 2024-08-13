@@ -1,65 +1,61 @@
 .wishlist-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 16px;
-    margin-bottom: 16px;
-    background-color: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Display 4 items per row */
+  gap: 20px; /* Space between items */
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+  border: 1.5px solid rgba(225, 225, 225, 0.18);
   
-  .wishlist-card-college {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-bottom: 12px;
-    color: #000;
-  }
+}
+
+.wishlist-card-college {
+  grid-column: span 4; /* Make college name span across all 4 columns */
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.wishlist-card-course {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: #fff;
   
-  .wishlist-card-course {
-    color: #000;
-    display: flex;
-    align-items: center;
-    border-top: 1px solid #ddd;
-    padding-top: 12px;
-    margin-top: 12px;
-  }
-  
-  .wishlist-card-img img {
-    border-radius: 4px;
-    margin-right: 16px;
-  }
-  
-  .wishlist-card-details {
-    flex-grow: 1;
-  }
-  
-  .wishlist-card-title {
-    font-size: 1em;
-    font-weight: bold;
-    margin-bottom: 4px;
-  }
-  
-  .wishlist-card-description {
-    font-size: 0.9em;
-    color: #000;
-    margin-bottom: 8px;
-  }
-  
-  .wishlist-card-actions {
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  .wishlist-card-actions button {
-    background-color: #ff6b6b;
-    border: none;
-    color: #fff;
-    padding: 8px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .wishlist-card-actions button:hover {
-    background-color: #ff4c4c;
-  }
-  
+}
+
+.wishlist-card-img img {
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.wishlist-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.wishlist-card-description {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.wishlist-card-actions button {
+  background-color: #ffcc00;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #333;
+}
+
+.wishlist-card-actions button:hover {
+  background-color: #e6b800;
+}
