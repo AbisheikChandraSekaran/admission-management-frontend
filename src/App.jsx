@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import College from './component/College'
 import Header from './component/Header'
-
+import AddCollegeForm from './component/AddCollegeForm';
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomeLayout from './component/HomeLayout'
@@ -23,6 +23,7 @@ const App = () => {
       <Routes>
       <Route path="/signup" element={<Register/>}/>
       <Route path="/login" element={<Login />}></Route>
+      <Route path="/addcollege" element={<AddCollegeForm />}></Route>
         <Route path="/" element={<HomeLayout />}>
           <Route path="/" element={<College/>} />
           <Route path="/wishlist" element={<Wishlist/>}/>

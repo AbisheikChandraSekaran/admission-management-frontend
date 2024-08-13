@@ -1,6 +1,6 @@
 
 // import React from 'react';
-// import { addItem } from '../redux/wishList';
+// import { addItemToWishlist } from '../redux/wishList';
 // import {useDispatch} from 'react-redux';
 
 // import { useNavigate } from 'react-router-dom';
@@ -12,7 +12,7 @@
 
 //   const dispatch = useDispatch();
 //   const handleAdd = () => {
-//     dispatch(addItem(props.item));
+//     dispatch(addItemToWishlist(props.item));
 //   };
 // const navigate = useNavigate();
 
@@ -69,7 +69,7 @@ const CollegeCard = (props) => {
         }
         
       });
-    
+     console.log(res);
     dispatch(addItem(props.item));
     }
 

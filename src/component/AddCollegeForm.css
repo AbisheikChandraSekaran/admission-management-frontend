@@ -1,0 +1,27 @@
+/* AddCollegeForm.css */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  div {
+    margin-bottom: 1rem;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input, select {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  button {
+    padding: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  

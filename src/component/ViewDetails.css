@@ -1,0 +1,40 @@
+.course-cards-container {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically */
+    gap: 20px; /* Space between cards */
+    padding: 20px; /* Padding around the container */
+    justify-content: center;
+    
+  }
+  
+  
+  /* Course card styles */
+.view-details {
+    padding: 20px;
+  }
+  
+  .view-details img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .view-details p {
+    font-size: 1rem;
+    color:aliceblue;
+    margin: 10px 0;
+  }
+  
+  .view-details h2 {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 20px;
+  }
+  
+  .view-details .course-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
